@@ -17,12 +17,13 @@
             background:lime;
             border: 1px solid #ccc;
         }
+
     </style>
 </head>
 <body>
 <div class="main">
     <div class="center">
-        <div style="background-position: 100px 100px" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: left" onclick="changeColor(this)" class="pixel"></div>
         <div onclick="changeColor(this)" class="pixel"></div>
         <div style="background-position: 200px 200px" onclick="changeColor(this)" class="pixel"></div>
         <div onclick="changeColor(this)" class="pixel"></div>
@@ -45,12 +46,12 @@
             a.setAttribute("mouse-click",click);
 
         }else if(click % 3 == 1){
-            a.style.backgroundImage = "url('image/2.jpg')";
+            a.style.backgroundImage = "url('image/1.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
         }
         else if( click % 3 == 2){
-            a.style.backgroundImage = "url('image/3.jpg')";
+            a.style.backgroundImage = "url('image/1.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
         }
