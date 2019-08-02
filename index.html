@@ -23,12 +23,12 @@
 <body>
 <div class="main">
     <div class="center">
-        <div style="background-position: left" onclick="changeColor(this)" class="pixel"></div>
-        <div onclick="changeColor(this)" class="pixel"></div>
-        <div style="background-position: 200px 200px" onclick="changeColor(this)" class="pixel"></div>
-        <div onclick="changeColor(this)" class="pixel"></div>
-        <div style="background-position: 400px 400px" onclick="changeColor(this)" class="pixel"></div>
-        <div onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 0% 0%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 100% 0%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 0% 50%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 100% 50%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 0% 100%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-position: 100% 100%" onclick="changeColor(this)" class="pixel"></div>
 
     </div>
 </div>
@@ -46,12 +46,12 @@
             a.setAttribute("mouse-click",click);
 
         }else if(click % 3 == 1){
-            a.style.backgroundImage = "url('image/1.jpg')";
+            a.style.backgroundImage = "url('image/2.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
         }
         else if( click % 3 == 2){
-            a.style.backgroundImage = "url('image/1.jpg')";
+            a.style.backgroundImage = "url('image/3.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
         }
