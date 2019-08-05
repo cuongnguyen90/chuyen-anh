@@ -23,12 +23,12 @@
 <body>
 <div class="main">
     <div class="center">
-        <div style="background-image:url('image/1.jpg');background-position: 0% 0%" onclick="changeColor(this)"  class="pixel"></div>
-        <div style="background-image:url('image/3.jpg');background-position: 100% 0%" onclick="changeColor(this)"  class="pixel"></div>
-        <div style="background-image:url('image/2.jpg');background-position: 0% 50%" onclick="changeColor(this)"  class="pixel"></div>
-        <div style="background-image:url('image/1.jpg');background-position: 100% 50%" onclick="changeColor(this)"  class="pixel"></div>
-        <div style="background-image:url('image/2.jpg');background-position: 0% 100%" onclick="changeColor(this)"  class="pixel"></div>
-        <div style="background-image:url('image/1.jpg');background-position: 100% 100%" onclick="changeColor(this)" class="pixel"></div>
+        <div style="background-image:url('image/1.jpg');background-position: 0% 0%" onclick="changeColor(this);Check()"  class="pixel" id="pixel1"></div>
+        <div style="background-image:url('image/3.jpg');background-position: 100% 0%" onclick="changeColor(this);Check()"  class="pixel" id="pixel2" ></div>
+        <div style="background-image:url('image/2.jpg');background-position: 0% 50%" onclick="changeColor(this);Check()"  class="pixel" id="pixel3" ></div>
+        <div style="background-image:url('image/1.jpg');background-position: 100% 50%" onclick="changeColor(this);Check()"  class="pixel" id="pixel4" ></div>
+        <div style="background-image:url('image/2.jpg');background-position: 0% 100%" onclick="changeColor(this);Check()"  class="pixel" id="pixel5"></div>
+        <div style="background-image:url('image/1.jpg');background-position: 100% 100%" onclick="changeColor(this);Check()" class="pixel" id="pixel6"></div>
 
     </div>
 </div>
@@ -36,28 +36,52 @@
     function changeColor(a) {
 
         //a.setAttribute("click", 0);
-
         click = a.getAttribute("mouse-click");
 
+        //console.log(pixel_1);
 
         if (click % 3 == 0){
+
             a.style.backgroundImage = "url('image/1.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
+
+
 
         }else if(click % 3 == 1){
             a.style.backgroundImage = "url('image/2.jpg')";
             click++;
             a.setAttribute("mouse-click",click);
         }
-        else if( click % 3 == 2){
+        else if(click % 3 == 2){
             a.style.backgroundImage = "url('image/3.jpg')";
+
+
             click++;
             a.setAttribute("mouse-click",click);
+
         }
-        ///
 
 
+
+    }
+    function Check(){
+
+
+        let pixel_1 = document.getElementById('pixel1').style.backgroundImage;
+        let pixel_2 = document.getElementById('pixel2').style.backgroundImage;
+        let pixel_3 = document.getElementById('pixel3').style.backgroundImage;
+        let pixel_4 = document.getElementById('pixel4').style.backgroundImage;
+        let pixel_5 = document.getElementById('pixel5').style.backgroundImage;
+        let pixel_6 = document.getElementById('pixel6').style.backgroundImage;
+        if (pixel_1 == pixel_2
+            && pixel_2 == pixel_3
+            && pixel_3 == pixel_4
+            && pixel_4 == pixel_5
+            && pixel_5 == pixel_6){
+            alert("Trung");
+
+        }
     }
 </script>
 </body>
